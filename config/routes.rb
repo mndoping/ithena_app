@@ -1,13 +1,12 @@
 IthenaApp::Application.routes.draw do
-  get "pages/home"
 
-  get "pages/account"
-
-  get "pages/about"
-
-  get "pages/contact"
-
-  get "pages/faq"
+  match '/account', :to => 'pages#account'
+  match '/about',   :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/faq',     :to => 'pages#faq'
+  
+  root              :to => 'pages#home'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
