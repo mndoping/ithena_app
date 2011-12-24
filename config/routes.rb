@@ -1,4 +1,14 @@
 IthenaApp::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/account"
+
+  get "pages/about"
+
+  get "pages/contact"
+
+  get "pages/faq"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
