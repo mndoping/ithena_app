@@ -1,5 +1,7 @@
 IthenaApp::Application.routes.draw do
 
+  resources :users
+
   match '/account', :to => 'pages#account'
   match '/about',   :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
