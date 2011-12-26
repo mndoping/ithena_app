@@ -127,14 +127,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
-    uglifier (1.2.0)
+    uglifier (1.2.1)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     webrat (0.7.1)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -156,4 +155,3 @@ DEPENDENCIES
   therubyracer-heroku (= 0.8.1.pre3)
   uglifier (>= 1.0.3)
   webrat (= 0.7.1)
-  will_paginate (= 3.0.pre2)
