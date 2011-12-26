@@ -6,6 +6,7 @@ IthenaApp::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/faq',     :to => 'pages#faq'
+  match '/signup',  :to => 'users#new'
   
   root              :to => 'pages#home'
   
