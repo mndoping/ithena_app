@@ -83,8 +83,8 @@ class UsersController < ApplicationController
   end
   
   private
-  
-  def auth
-    deny_access unless signed_in?
-  end
+    
+    def auth
+      deny_access unless signed_in?
+    end
 end

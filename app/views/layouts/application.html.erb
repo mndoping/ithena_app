@@ -32,10 +32,12 @@
   	<div id="main" role="main">
 			<%= yield %>
   	</div>
-  	<footer>
-			<%= render 'layouts/footer' %>
-			<%= debug(params) if Rails.env.development? %>
-  	</footer>
+		<div class="clear">
+  		<footer>
+				<%= render 'layouts/footer' %>
+				<%= debug(params) if Rails.env.development? %>
+  		</footer>
+		</div>
   </div> <!--! end of #container -->
 	
   <!-- Change UA-XXXXX-X to be your site's ID -->

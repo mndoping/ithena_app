@@ -347,6 +347,32 @@ a {
     clear:both;
 }
 
+/* Sign in Box on the home page */
+.homepage-boxes {
+    border: 1px solid black;
+    padding: 5px;
+    width: 200px;
+    height: 220px;
+}
+
+/* Float left and right */
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float:right;
+}
+
+/* Clear both from floats */
+.clear {
+    clear:both;
+}
+
+/* Spacer */
+.spacer-50 {
+    min-height:50px;
+}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
