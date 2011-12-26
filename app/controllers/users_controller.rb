@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :auth, :only => [:edit, :update]
   # GET /users
   # GET /users.json
   def index
@@ -79,5 +80,11 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :ok }
     end
+  end
+  
+  private
+  
+  def auth
+    deny_access unless signed_in?
   end
 end

@@ -1,12 +1,15 @@
 IthenaApp::Application.routes.draw do
 
   resources :users
+  resources :sessions
 
   match '/account', :to => 'pages#account'
   match '/about',   :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/faq',     :to => 'pages#faq'
   match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   
   root              :to => 'pages#home'
   
