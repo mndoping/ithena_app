@@ -349,10 +349,12 @@ a {
 
 /* Sign in Box on the home page */
 .homepage-boxes {
+    float:left;
     border: 1px solid black;
     padding: 5px;
     width: 200px;
     height: 220px;
+    margin:5px;
 }
 
 /* Float left and right */
