@@ -1,5 +1,7 @@
 IthenaApp::Application.routes.draw do
 
+  resources :companies
+
   resources :users
   resources :sessions
 

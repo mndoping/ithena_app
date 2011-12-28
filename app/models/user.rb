@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   #Note that password actually refers to pin
-  attr_accessible :name, :email, :password, :password_confirmation, :mobile_no
+  attr_accessible :name, :email, :password, :password_confirmation, :mobile_no, :mobile_no_confirmation, :mobile_alias
   has_secure_password
   validates_presence_of :password, :on => :create
   

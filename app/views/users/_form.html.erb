@@ -1,1 +1,82 @@
+<h1 style="font-size:20px;">Personal Sign Up</h1>
+<br/>
+<%= form_for(@user) do |f| %>
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+      	<% end %>
+			</ul>
+    </div>
+	<% end %>
+	<h1>Personal Information</h1>
+	<hr>
+	<div class="field">
+		<%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+	<div class="field">
+    <%= f.label :birthday %><br />
+		<%= select_tag(:month, options_for_select([['Month:', -1], ['January', 1], ['February', 2],['March', 3], 
+																								['April', 4],['May', 5], ['June', 6],['July', 7], ['August', 8],
+																								['September', 9], ['October', 10],['November', 11], ['December', 12]])) %>
+		<%= select_tag(:day, options_for_select([['Day:', -1], ['1', 1], ['2', 2],['3', 3], ['4', 4],['5', 5], ['6', 6],
+																								['7', 7], ['8', 8],['9', 9], ['10', 10],['11', 11], ['12', 12], ['13', 13], 
+																								['14', 14],['15', 15], ['16', 16],['17', 17], ['18', 18],['19', 19], ['20', 20],['21', 21], 
+																								['22', 22],['23', 23], ['24', 24],['25', 25],['26', 26], ['27', 27],['28', 28], 
+																								['29', 29],['30', 30], ['31', 31]])) %>
+		<%= select_tag(:year, options_for_select([['Year:', -1], ['2011', 2011], ['2010', 2010],['2009', 2009], ['2008', 2008],
+																								['2007', 2007], ['2006', 2006],['2005', 2005], ['2004', 2004],['2003', 2003], 
+																								['2002', 2002],['2001', 2001], ['2000', 2000]])) %>
+  </div>
+	<br/>
+	<h1>Mobile Information</h1>
+	<hr>
+	<div class="field">
+		<%= f.label :mobile_no %><br />
+    <%= f.text_field :mobile_no %>
+  </div>
+	<div class="field">
+		<%= f.label :mobile_no_confirmation %><br />
+    <%= f.text_field :mobile_no_confirmation %>
+  </div>
+	<div class="field">
+		<%= f.label :network %><br />
+    <%= select_tag(:month, options_for_select([['Select:', -1], ['ZAIN', 1], ['MTN', 2],['GLO', 3], ['ETISALAT', 4]])) %>
+  </div>
+	<div class="field">
+    <%= f.label :phone_manufacturer %><br />
+    <%= select_tag(:phone_manufacturer, options_for_select([['Select:', -1], ['Iphone', 1], ['Nokia', 2],['Samsung', 3]])) %>
+  </div>
+	<div class="field">
+		<%= f.label :mobile_alias %><br />
+    <%= f.text_field :mobile_alias %>
+  </div>
+	<div class="field">
+		<%= f.label :mobile_plan %><br />
+    <%= select_tag(:mobile_plan, options_for_select([['Select:', -1], ['Prepaid', 1], ['Postpaid', 2]])) %>
+  </div>
+	<%= link_to 'Add mobile numbers', "#" %>
+	<br/>
+	<h1>Account Information</h1>
+	<hr>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+	<div class="field">
+		<%= f.label :password %><br />
+	  <%= f.password_field :password %>
+	</div>
+	<div class="field">
+		<%= f.label :password_confirmation, "Password Confirmation" %><br />
+	    <%= f.password_field :password_confirmation %>
+	</div>
+  	<div class="actions">
+    	<%= f.submit %>
+  	</div>
+<% end %>
 
+<%= link_to 'Back', users_path %>

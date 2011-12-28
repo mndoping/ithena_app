@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_filter :auth, :only => [:edit, :update]
   # GET /users
   # GET /users.json
   def index
@@ -26,6 +25,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
+    @company = Company.new
 
     respond_to do |format|
       format.html # new.html.erb
