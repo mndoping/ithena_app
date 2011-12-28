@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111228033131) do
+ActiveRecord::Schema.define(:version => 20111228040800) do
 
   create_table "companies", :force => true do |t|
     t.datetime "created_at"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20111228033131) do
     t.string   "mobile_no"
     t.string   "mobile_no_confirmation"
     t.string   "mobile_alias"
+    t.string   "mobile_plan"
   end
 
 end
